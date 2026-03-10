@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanguard Elite Security Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Background music -->
+<audio id="bg-music" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2021/09/14/audio_12345678.mp3?filename=mission-impossible-style-112.mp3" type="audio/mpeg">
+</audio>
+<button onclick="toggleMusic()" class="main-btn music-btn">Play / Pause Music</button>
+
+<!-- Navigation -->
+<nav>
+    <button onclick="showSection('agent-section')">AGENT</button>
+    <button onclick="showSection('civilian-section')">CIVILIAN</button>
+    <button onclick="showSection('service-section')">SERVICE COVERAGE</button>
+    <button onclick="showSection('helpdesk-section')">HELP DESK</button>
+    <button onclick="showSection('learn-section')">LEARN MORE</button>
+    <button onclick="showSection('contact-section')">CONTACT</button>
+</nav>
+
+<!-- Sections -->
+<section id="agent-section">
+    <h1>Agent Login</h1>
+    <input type="text" id="agent-username" placeholder="Username"><br>
+    <input type="text" id="agent-code" placeholder="Message Code / Gmail"><br>
+    <button class="main-btn" onclick="agentLogin()">Login</button>
+
+    <div id="agent-dashboard" class="dashboard" style="display:none;">
+        <h2>Mission Dashboard</h2>
+        <ul>
+            <li class="clickable" onclick="showMission('Alpha')">Mission Alpha</li>
+            <li class="clickable" onclick="showMission('Bravo')">Mission Bravo</li>
+            <li class="clickable" onclick="showMission('Charlie')">Mission Charlie</li>
+            <li class="clickable" onclick="showMission('Delta')">Mission Delta</li>
+        </ul>
+        <div id="mission-popup" class="popup"></div>
+
+        <h2>Organization Chart</h2>
+        <ul>
+            <li>CEO: Bobong Marcos</li>
+            <li>Chief Executive: Lenlen</li>
+            <li>Middle East – Jomari Demaluna – Intelligence Commander III</li>
+            <li>Philippines – Lorenz Cells – Intelligence Commander I</li>
+            <li>Indonesia – Wendirick Belardo – Intelligence Commander I</li>
+            <li>North Korea – Sofia Nericka Rojo – Intelligence Commander I</li>
+            <li>Zimbabwe – Rose Ann Hilotin – Intelligence Commander I</li>
+            <li>Mexico – Elmanuel Oida – Intelligence Commander I</li>
+            <li>Singapore – Shiela Villanueva – Intelligence Commander I</li>
+        </ul>
+        <button class="main-btn" onclick="logoutAgent()">Logout</button>
+    </div>
+</section>
+
+<section id="civilian-section">
+    <h1>Civilian Assistance</h1>
+    <p>Click a region to see officer & address:</p>
+    <div>
+        <button class="main-btn" onclick="showRegion('Middle East')">Middle East</button>
+        <button class="main-btn" onclick="showRegion('Philippines')">Philippines</button>
+        <button class="main-btn" onclick="showRegion('Indonesia')">Indonesia</button>
+        <button class="main-btn" onclick="showRegion('Japan')">Japan</button>
+        <button class="main-btn" onclick="showRegion('China')">China</button>
+        <button class="main-btn" onclick="showRegion('Singapore')">Singapore</button>
+        <button class="main-btn" onclick="showRegion('US')">US</button>
+        <button class="main-btn" onclick="showRegion('Mexico')">Mexico</button>
+        <button class="main-btn" onclick="showRegion('North Korea')">North Korea</button>
+        <button class="main-btn" onclick="showRegion('Zimbabwe')">Zimbabwe</button>
+    </div>
+    <div id="region-popup" class="popup"></div>
+</section>
+
+<section id="service-section">
+    <h1>Service Coverage</h1>
+    <p>Click a region to see branch addresses:</p>
+    <div>
+        <button class="main-btn" onclick="showCoverage('Middle East')">Middle East</button>
+        <button class="main-btn" onclick="showCoverage('Philippines')">Philippines</button>
+        <button class="main-btn" onclick="showCoverage('Indonesia')">Indonesia</button>
+        <button class="main-btn" onclick="showCoverage('Japan')">Japan</button>
+        <button class="main-btn" onclick="showCoverage('China')">China</button>
+        <button class="main-btn" onclick="showCoverage('Singapore')">Singapore</button>
+        <button class="main-btn" onclick="showCoverage('US')">US</button>
+        <button class="main-btn" onclick="showCoverage('Mexico')">Mexico</button>
+        <button class="main-btn" onclick="showCoverage('North Korea')">North Korea</button>
+        <button class="main-btn" onclick="showCoverage('Zimbabwe')">Zimbabwe</button>
+    </div>
+    <div id="coverage-popup" class="popup"></div>
+</section>
+
+<section id="helpdesk-section">
+    <h1>Help Desk</h1>
+    <input type="text" id="help-name" placeholder="Your Name"><br>
+    <input type="email" id="help-email" placeholder="Your Email"><br>
+    <textarea id="help-message" rows="5" placeholder="Your concern / complaint"></textarea><br>
+    <button class="main-btn" onclick="submitHelp()">Submit Message</button>
+</section>
+
+<section id="learn-section">
+    <h1>Learn More About Vanguard</h1>
+    <button class="main-btn" onclick="showLearn('Mission')">Mission & Vision</button>
+    <button class="main-btn" onclick="showLearn('History')">History</button>
+    <button class="main-btn" onclick="showLearn('Services')">Services</button>
+    <button class="main-btn" onclick="showLearn('Values')">Core Values</button>
+    <div id="learn-popup" class="popup"></div>
+</section>
+
+<section id="contact-section">
+    <footer>
+        <h2>Contact Vanguard Elite Security</h2>
+        <p>Email: contact@vanguardelite.com</p>
+        <p>Gmail: demalunajomari16@gmail.com</p>
+        <p>Phone: +1‑800‑555‑0199</p>
+        <p>Address: 123 Elite Security Blvd, Global City</p>
+    </footer>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

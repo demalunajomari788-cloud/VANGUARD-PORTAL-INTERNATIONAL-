@@ -1,0 +1,51 @@
+/* Base */
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial,sans-serif; }
+body {
+    background: linear-gradient(270deg,#0a0a0a,#1a1a1a,#0a0a0a);
+    background-size:800% 800%;
+    animation: gradientBG 20s ease infinite;
+    color:#FFD700;
+    overflow-x:hidden;
+}
+@keyframes gradientBG {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* Navigation / surface buttons */
+nav {
+    position:sticky;
+    top:0;
+    background:#111;
+    padding:15px;
+    text-align:center;
+    z-index:100;
+}
+nav button {
+    margin:6px;
+    padding:12px 22px;
+    background:#DAA520;
+    color:black;
+    border:none;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+}
+nav button:hover { opacity:0.8; }
+
+/* Sections hidden by default */
+section { display:none; padding:30px; text-align:center; }
+
+/* Buttons & inputs */
+button.main-btn { padding:10px 20px; background:#FFD700; color:black; border:none; border-radius:6px; cursor:pointer; font-weight:bold; margin:6px;}
+input,textarea { width:90%; padding:10px; margin:8px 0; border-radius:6px; border:none; }
+textarea{resize:none;}
+.dashboard ul { text-align:left; padding-left:20px;}
+li.clickable { cursor:pointer; margin:8px 0; padding:6px; border-bottom:1px solid #444;}
+li.clickable:hover { color:#38bdf8;}
+.popup { background:rgba(0,0,0,0.95); border:2px solid #FFD700; border-radius:10px; padding:18px; margin-top:15px; display:none;}
+.address-list{text-align:left; padding-left:20px; font-size:14px;}
+footer { margin-top:30px; padding:20px; background:#111; color:#FFD700; text-align:center;}
+.music-btn { position:fixed; bottom:20px; right:20px;}
+
